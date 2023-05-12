@@ -43,7 +43,7 @@
 ``` 
     <html>
         <head>
-        <meta charset=utf8>
+        <meta charset=UTF-8>
         <title> Primeira página </title>
         </head>
         <body>

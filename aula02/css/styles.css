@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+
+header{
+    /*o aplicar uma imagem de fundo com o comando background-image*/
+    background-image:url("../images/bg-girl.png");
+    /* largura do header*/
+    width: 100%;
+    /* altura do header*/
+    height: 800px;
+    /* não repetir a imagem de fundo*/
+    background-repeat: no-repeat;
+    /* alterar o tamanho da imagem de fundo*/
+    background-size: 100%;
+    /* alterar a posição do plano de fundo.
+    o primeiro elemento é a posição x e segundo
+    a posição y*/
+    background-position: 0 -100px;
+    /*vamos dispor o conteudo de forma flexivel*/
+    display: flex;
+}
+
+header #direita{
+    font-size: 220pt;
+    color:whitesmoke;
+    transform: rotate(-90deg);
+    font-weight: bold;
+    letter-spacing: -40px;
+    flex: 1;
+    height: 300px;
+    margin-top: 240px;
+    margin-right: -120px;
+}
+header #esquerda{
+    flex: 2;
+    padding-left: 700px;
+    padding-top: 250px;
+    color:whitesmoke;
+    font-size: 45px;
+    font-weight: bolder;
+}
+header #esquerda span{
+    font-size: 20px;
+}
+header #esquerda img{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+header #esquerda #fb, header #esquerda #ig{
+    font-size: 15pt;
+    font-weight: normal;
+    text-shadow: none;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+header #esquerda #end{
+    font-weight: lighter;
+    font-size: 10pt;
+    line-height: 10pt;
+    display: block;
+}
+header #esquerda #end img{
+    width: 140px;
+    height: 140px;
+}
