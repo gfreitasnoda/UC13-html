@@ -70,3 +70,79 @@ header #esquerda #end img{
     width: 140px;
     height: 140px;
 }
+main #programacao{
+    display: flex;
+}
+main #programacao div{
+    flex: 1;
+    font-family: verdana;
+    line-height: 25px;
+    padding:10px;
+}
+main #programacao div h4{
+    font-size: 15pt ;
+    color:orange;
+}
+main #programacao div h3{
+    font-size: 20pt;
+    color: darkblue;
+}
+main #programacao div p{
+    color: darkblue;
+}
+mains #programacao div p span{
+    color:orange;
+    margin: 0 10px;
+}
+main hr{
+    display: block;
+    border-color: orange;
+    border-width: 1,5px;
+    width: 55%;
+    margin:10px 0;
+}
+main #cursos{
+    display:flex;
+    padding: 20px;
+    font-family: verdana;
+}
+main #cursos div{
+    flex: 1
+}
+main #cursos div h3{
+    margin-top: 35px;
+}
+main #cursos div ul{
+    padding-left: 20px;
+}
+footer hr{
+    width: 80%;
+    border-color: orange;
+    border-width: 1,5px;
+    margin: 20px 0;
+    margin-left: auto;
+}
+footer #rodape{
+    display:flex;
+    padding: 20px;
+}
+footer #rodape div{
+    flex:1; 
+}
+footer #rodape div h2{
+    color:darkblue;
+}
+footer #rodape div h3{
+    margin-top: 35px;
+    margin: 20px 0;
+    color:darkblue; 
+}
+footer #rodape div ul{
+    padding-left: 20px;
+    margin: 20px 0;
+}
+footer #rodape img{
+    width: 400px;
+    height: 250px;
+    margin-left: 425px;
+}
