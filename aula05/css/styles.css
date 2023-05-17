@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: silver;
+}
+main{
+    background-color: white;
+    width: 60%;
+    margin: 50px auto;
+    border-radius:50px;
+    height: 600px;
+}
+#login input{
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 120px;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 11pt;
+    font-weight: lighter;
+    border-radius: 10px;
+    outline: none;
+    display: block;
+    padding-left: 12px;
+    position: relative;
+}
+form input[type=submit]{
+    display: block;
+    margin-left: 120px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: black;
+    color:white;
+    width: 25%;
+    margin-bottom: 15px;
+}
+img {
+    width: 60%;
+    height: 600px;
+    margin-left: 425px;
+    display: flex;
+    justify-content: space-between;
+}
