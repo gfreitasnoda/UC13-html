@@ -11,36 +11,112 @@ main{
     width: 60%;
     margin: 50px auto;
     border-radius:50px;
-    height: 600px;
+    height: 700px;
+    display:flex;
+    justify-content: space-between;
+}
+#esquerda h1{
+    font-family:Georgia;
+    font-size: 40px;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+#esquerda h2{
+    font-family: Georgia;
+    font-size: 12px;
+    margin-left: 123px;
+    color: gray;
+}
+#direita img{
+    object-fit: cover;
+    height: 700px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 #login input{
-    width: 25%;
-    padding: 10px;
-    margin-bottom: 15px;
-    margin-left: 120px;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 11pt;
-    font-weight: lighter;
+    font-family:Verdana;
+    font-size: 16px;
+    width: 260px    ;
+    margin-left: 150px;
+    margin-top: 12px;
+    top: 60px;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    height: 50px;
     border-radius: 10px;
-    outline: none;
     display: block;
-    padding-left: 12px;
     position: relative;
+    outline-color: gray;
 }
-form input[type=submit]{
-    display: block;
-    margin-left: 120px;
-    padding: 20px 40px;
+
+#login input[type=button]{
+    background-image: url("https://t.ctcdn.com.br/essK16aBUDd_65hp5umT3aMn_i8=/400x400/smart/filters:format(webp)/i606944.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 35px;
+    padding-left: 1.3em;
+    font-family:Verdana;
+    font-size: 16px;
+    width: 260px    ;
+    margin-left: 150px;
+    margin-top: 12px;
+    top: 20px;
+    margin-bottom: 12px;
+    margin-right: 10px;
+    height: 50px;
     border-radius: 10px;
+    display: block;
+    position: relative;
+    outline-color: gray;
+    background-color: white;
+}
+
+#linguagem{
+    border-radius: 10px;
+    margin-top: 35px;
+    margin-right: 60px;
+    font-family: serif;
+    font-size: 15px;
+    height: 30px;
+    width: 60px;
+}
+#forget{
+    margin-top: 90px;
+    margin-left: 270px;
+    font-family: Verdana;
+    font-size: 15px;
+}
+#forget a {
+    font-family: Verdana;
+    font-size: 10pt;
+    color: gray;
+    font-weight: 600;
+    text-decoration: none; 
+}
+#botao{
+    margin-left: 150px;
+    margin-top: 30px;
+    height: 50px;
+    width: 260px;
     background-color: black;
     color:white;
-    width: 25%;
-    margin-bottom: 15px;
+    border-radius: 10px;
 }
-img {
-    width: 60%;
-    height: 600px;
-    margin-left: 425px;
-    display: flex;
-    justify-content: space-between;
+#conta h1{
+    font-family:Verdana;
+    font-size: 13px;
+    margin-top: 10px;
+}
+#conta h1 a{
+    font-family: Verdana;
+    font-size: 10pt;
+    color: gray;
+    font-weight: 600;
+    text-decoration: none; 
+}
+#esquerda h3{
+    font-family:fantasy;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 50px;
 }
