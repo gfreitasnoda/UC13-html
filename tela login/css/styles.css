@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'outfit';
+}
+body{
+    background-color: silver;
+}
+main{
+    background-color: white;
+    width: 60%;
+    margin: 50px auto;
+    border-radius:50px;
+    height: 600px;
+    display: flex;
+}
+h2{
+    font-family: 'Bebas Neue', sans-serif;
+}
+h1{
+    font-size: 50pt;
+}
+#area{
+    background-image: url("../img/astronauta.jpg");
+    background-size: 100%;
+    background-position: 0 -100px;
+    border-top-right-radius:50px ;
+    border-bottom-right-radius:50px ;
+    height: 600px;
+    flex: 1;
+}
+form{
+    flex:1 ;
+    height: 600px;
+}
+#titulo{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+#titulo img{
+    width: 50px;
+    height: 30;
+}
+#elements{
+    text-align: center;
+}
+#buttongoogle{
+    padding:10px;
+    border:1px solid silver;
+    width:60%;
+    margin:10px auto;
+    border-radius: 10px;
+
+}
+#buttongoogle img{
+    width: 150px;
+    height: 20px;
+}
+#elements input[type=text],#elements input[type=password]{
+    display: block;
+    margin: 20px auto;
+    width: 60%;
+    padding:15px;
+    border-radius: 10px;
+    border:1px solid silver
+}
+#separator{
+    font-family: arial;
+}
+#forgot{
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    text-align: right;
+    color:rgb(14, 74, 206);
+    font-family: arial;
+    font-size:9pt
+}
+#elements input[type=submit]{
+    display: block;
+    margin: 10px auto;
+    width: 60%;
+    color: white;
+    border-radius: 30px;
+    background-color: black;
+    padding:10px;
+    border:0
+}
+
+#register{
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    text-align: center;
+    font-family: arial;
+    font-size:9pt
+}
+#register span{
+    color:rgb(14, 74, 206);
+}
+
+#shadow{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: -100;
+    opacity: 0;
+    transition: ease 1s;
+}
+#shadow div{
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 400px;
+    padding: 20px;
+    margin: 10% auto 10% auto;
+}
+#fechar{
+    position:absolute;
+    right: 25%;
+    top: 15%;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size:  30pt;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Lucida Sans';
+    text-decoration: none;
+    transition: ease 1s;
+}
+#fechar:hover{
+    transform: rotate(360deg);
+}
+input{
+    display: block;
+    margin-bottom: 10px;
+    border: 0;
+    outline: none;
+}
+input[type=text],input[type=email],input[type=password]{
+    border-bottom: 1px solid black;
+    width: 98%;
+    padding: 8px;
+    font-size: 15pt;
+    font-weight: lighter;
+}
+input[type=file]{
+    padding: 10px;
+    font-weight: lighter;
+    font-size: 12pt;
+}
+input[type=submit]{
+    margin: 10px auto;
+    padding: 10px;
+    width: 40%;
+    text-align: center;
+    font-size: 12pt;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+input[type=submit]:hover{
+    background-color: green;
+    color: black;
+}
+#registro{
+    cursor:pointer;
+}

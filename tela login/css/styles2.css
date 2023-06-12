@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+main,header{
+    background-color: white;
+    width: 70%;
+    margin:0 auto;
+    padding: 10px;
+}
+header h1{
+    font-family: 'Lucida Sans';
+    font-size: 20pt;
+    font-weight: lighter;
+    padding: 10px;
+}
+.div_user{
+    display: flex;
+    box-shadow: 0px 0px 10px black;
+    margin: 5px auto 20px auto;
+    width: 90%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    transition: ease 0.5s;
+    justify-content: space-between;
+    align-items: center;
+}
+.div_user img{
+    width: 100px;
+    height: 100px;
+}
+.div_user h2{
+    font-family: 'Lucida Sans';
+    font-weight: lighter;
+    color: black;
+}
+.div_user h3{
+    font-family: 'Lucida Sans';
+    font-weight: lighter;
+    color: black;
+}
+.div_user:hover{
+    transform: scale(1.1);
+    background-color: white;
+}
+.div_user a img{
+    width: 30px;
+    height: 30px;
+}
+#div_shadow{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    opacity: 1;
+    transition: ease 1s;
+}
+#div_shadow div{
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 400px;
+    padding: 20px;
+    margin: 10% auto 10% auto;
+}
+#fechar{
+    position:absolute;
+    right: 25%;
+    top: 15%;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size:  30pt;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Lucida Sans';
+    text-decoration: none;
+    transition: ease 1s;
+}
+#fechar:hover{
+    transform: rotate(360deg);
+}
+input{
+    display: block;
+    margin-bottom: 10px;
+    border: 0;
+    outline: none;
+}
+input[type=text],input[type=email],input[type=password]{
+    border-bottom: 1px solid black;
+    width: 98%;
+    padding: 8px;
+    font-size: 15pt;
+    font-weight: lighter;
+}
+input[type=file]{
+    padding: 10px;
+    font-weight: lighter;
+    font-size: 12pt;
+}
+input[type=submit]{
+    margin: 10px auto;
+    padding: 10px;
+    width: 40%;
+    text-align: center;
+    font-size: 12pt;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+input[type=submit]:hover{
+    background-color: green;
+    color: black;
+}
