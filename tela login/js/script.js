@@ -35,7 +35,7 @@ btn.onclick = () => {
                 txtpassword.value = "";
                 console.log(dado);
                 //mudar a tela
-                window.location.href=`list.html?key=${token}`;
+                window.location.href = `list.html?key=${token}`;
                 //widow.location.replace="list.html"
             }
             else {
@@ -100,10 +100,17 @@ btncad.onclick = () => {
 }
 function carregarDados() {
 
-    key = window.location.search.substring(5,window.location.search.length);
+    key = window.location.search.substring(5, window.location.search.length);
 
     const estrutura = document.getElementById("estrutura");
-    fetch("http://127.0.0.1:9210/users/list")
+    fetch("http://127.0.0.1:9210/users/list",{
+    method: "GET",
+    headers:{
+            "accept":"application/json",
+            "content-type":"application/json",
+            "token":key
+        }
+    })
         .then((response) => response.json())
         .then((result) => {
             result.data.map((item, index) => {
@@ -120,7 +127,7 @@ function carregarDados() {
             })
         }).catch((error) => console.log(`Erro ao executar a API -> ${error}`))
 }
-function editar(id, usuario, email, foto){
+function editar(id, usuario, email, foto) {
 
     //fazer uma referencia ao body da pagina html
     const body = document.body;
@@ -134,62 +141,74 @@ function editar(id, usuario, email, foto){
     const input_email = document.createElement("input");
     const input_file = document.createElement("input");
     const input_sub = document.createElement("input");
+    const fechar = document.createElement("a");
 
     //Aplicar atributos aos elementos
-    div_shadow.setAttribute("id","div_shadow");
-    div_white.setAttribute("id","div_white");
+    div_shadow.setAttribute("id", "div_shadow");
+    div_white.setAttribute("id", "div_white");
+    fechar.setAttribute("href","#");
+    fechar.setAttribute("id","fechar");
+    fechar.setAttribute("onclick","fecharFormAtualizar();");
+    fechar.innerHTML="&times;";
+    div_white.appendChild(fechar);
+
+
     //Atributo para nao fazer o envio do formulario. O envio será feito em JavaScript
-    form.setAttribute("onsubmit","return false");
+    form.setAttribute("onsubmit", "return false");
     //Aplicar os atributos ao id: type, placeholder, disabled
-    input_id.setAttribute("type","text");
-    input_id.setAttribute("placeholder",`Id Usuário ${id}`);
-    input_id.setAttribute("disabled","true");
+    input_id.setAttribute("type", "text");
+    input_id.setAttribute("placeholder", `Id Usuário ${id}`);
+    input_id.setAttribute("disabled", "true");
 
     //aplicar os atributos ao user: type, placeholder,disabled
 
-    input_user.setAttribute("type","text");
-    input_user.setAttribute("placeholder",`Id Usuário ${usuario}`);
-    input_user.setAttribute("disabled","true");
+    input_user.setAttribute("type", "text");
+    input_user.setAttribute("placeholder", `Id Usuário ${usuario}`);
+    input_user.setAttribute("disabled", "true");
 
     //Aplicar os atributos a senha e a confirmacao
-    input_pass.setAttribute("type","password");
-    input_pass.setAttribute("placeholder","Senha");
+    input_pass.setAttribute("type", "password");
+    input_pass.setAttribute("placeholder", "Senha");
 
-    input_confirm.setAttribute("type","password");
-    input_confirm.setAttribute("placeholder","Confirme a senha");
+    input_confirm.setAttribute("type", "password");
+    input_confirm.setAttribute("placeholder", "Confirme a senha");
 
     //aplicar os atributos ao email:type, placeholder
-    input_email.setAttribute("type","email");
-    input_email.setAttribute("placeholder",`${email}`);
+    input_email.setAttribute("type", "email");
+    input_email.setAttribute("placeholder", `${email}`);
+    input_email.setAttribute("value",`${email}`);
 
     //aplicar os atributos ao controle file:type, value
-    input_file.setAttribute("type","file");
-    input_file.setAttribute("value",`${foto}`);
+    input_file.setAttribute("type", "file");
+    input_file.setAttribute("value", `${foto}`);
 
     //aplicar atrib utos ao controle de submit:type, value
-    input_sub.setAttribute("type","submit");
-    input_sub.setAttribute("value","Atualizar");
+    input_sub.setAttribute("type", "submit");
+    input_sub.setAttribute("value", "Atualizar");
 
-    input_sub.onclick= ()=>{
-        if(input_confirm.value != input_pass.value){
+    input_sub.onclick = () => {
+        if (input_confirm.value != input_pass.value) {
             return alert("As senhas não coincidem")
         }
-        else{
-            fetch(`http://127.0.0.1:9210/users/update/${id}`,{
-            method: "PUT",
-            headers:{
-                "accept":"application/json",
-                "content-type":"application/json",
-                "token":key
-            },
-            body:JSON.stringify({
-                senha:input_pass.value,
-                email:input_email.value,
-                foto:input_file.value
-            })
-        })
+        else {
+            fetch(`http://127.0.0.1:9210/users/update/${id}`, {
+                method: "PUT",
+                headers: {
+                    "accept": "application/json",
+                    "content-type": "application/json",
+                    "token": key
+                },
+                body: JSON.stringify({
+                    senha: input_pass.value,
+                    email: input_email.value,
+                    foto: input_file.value
+                })
+            }).then((response)=> response.json())
+            .then((dados)=>{
+                alert(dados.output);
+            }).catch((error)=>console.log(`Erro ao ler a API ->${error}`))
+        }
     }
-}
     form.appendChild(input_id);
     form.appendChild(input_user);
     form.appendChild(input_pass);
@@ -201,4 +220,10 @@ function editar(id, usuario, email, foto){
     div_white.appendChild(form);
     div_shadow.appendChild(div_white);
     body.appendChild(div_shadow);
+}
+
+function fecharFormAtualizar(){
+    document.getElementById("div_shadow").style.zIndex="-100";
+    document.getElementById("div_shadow").style.opacity="0";
+    window.location.reload();
 }
